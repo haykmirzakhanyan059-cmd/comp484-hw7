@@ -5,19 +5,46 @@
 #ef233c - red
 */
 
-
 /* Global styles 
 ------------------------------------*/
+html {
+    box-sizing: border-box;
+  
+    font-size: 20px;
+}
 
+*, *:before, *:after {
+    box-sizing: inherit;
+} 
 
+.content-wrap {
+    max-width: 1100px; 
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+
+/* Body, headings, and other styles
+------------------------------------*/
 body {
     /* Remove the browser's default space around the page. */
     margin: 0;
 
     /* Use second font; use a serif fallback if unavailable. */
     font-family: "Libre Baskerville", serif;
-
-    font-size: 16px;
 
     /* Use the regular font weight for ordinary text. */
     font-weight: 400;
@@ -35,21 +62,19 @@ h2 {
 
     /* Use the bold font weight we requested from Google. */
     font-weight: 700;
+
+    margin: 0;
 }
 
 /* Selecting the main heading containing my name. */
 h1 {
-    font-size: 64px;
+    font-size: 56px;
 }
 
 /* Selecting the tagline and section headings. */
 h2 {
-    font-size: 36px;
-}
-
-
-header h1, header h2 {
-    margin: 0;
+    margin-top: 0;
+    font-size: 28px;
 }
 
 /* Selecting project titles and school names. */
@@ -64,25 +89,60 @@ a {
     color: #ef233c;
 }
 
+section {
+    margin: 0;
+    border-bottom: 3px solid rgb(46, 46, 86);
+}
+
+/* Stuff connected with Header and Footer
+------------------------------------*/
 header,
 footer {
     background: #2b2d42;
     color: #edf2f4;
     padding: 30px;
-    padding: 8px 3%;
-    letter-spacing: 0.16em;
+    font-size: 18px;
 }
 
-img{
-    max-width: 200px;
-    display: block;
-    border-radius: 100px;
+/* Modifying the contentwrap in the header*/
+header .content-wrap {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
 }
 
-section {
+header h1, header h2 {
     margin: 0;
-    border-bottom: 3px solid rgb(46, 46, 86);
 }
+
+/* Remove padding from the profile picture */
+header img.column-narrow {
+    padding-right: 0;
+    
+}
+
+.profile-img{
+    max-width: 300px;
+    border-radius: 50%;
+    /*float: left;*/
+    /*margin-right: 30px;*/
+}
+
+/* Add spacing between the picture and text */
+header .column-wide {
+    padding-left: 3%;
+}
+
+footer {
+    text-align: center;
+}
+
+.contact-info a {
+    padding: 10px; 
+    display: inline-block;
+}
+
+
 
 /* Projects
 ------------------------------------*/
@@ -101,3 +161,4 @@ section {
     color: #192328;
     padding: 30px;
 }
+
